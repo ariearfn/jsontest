@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>2. Find all electronic devices</title>
+ <script type="text/javascript">
+
+ let electronicDevices = [];
+  fetch("./data.json")
+.then(response => {
+   return response.json();
+})
+.then(function(data){
+   
+    var electronicDevices = data.filter(function(item){
+        return item.type === "electronic";
+    });
+    console.log(electronicDevices);
+})
+
+</script>
+</head>
+<body>
+</body>
+</html>

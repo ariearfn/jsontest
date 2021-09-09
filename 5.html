@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>5. Find all items with brown color</title>
+ <script type="text/javascript">
+
+ let brownColor = [];
+  fetch("./data.json")
+.then(response => {
+   return response.json();
+})
+.then(function(data){
+   
+    var brownColor = data.filter(function(item){
+        return item.tags === ["brown"];
+    });
+    console.log(brownColor);
+})
+
+</script>
+</head>
+<body>
+</body>
+</html>

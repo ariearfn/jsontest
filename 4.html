@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>4. Find all items were purchased on 16 Januari 2020</title>
+ <script type="text/javascript">
+ var date = new Date('2020.01.16').getTime() / 1000;
+ let meetingRoomObject = [];
+  fetch("./data.json")
+.then(response => {
+   return response.json();
+})
+.then(function(data){
+   
+    var purchaseDate = data.filter(function(item){
+        var date = new Date('2020.01.16').getTime() / 1000;
+        console.log(date);
+        return item.purchased_at === date;
+    });
+    console.log(purchaseDate);
+})
+
+</script>
+</head>
+<body>
+</body>
+</html>

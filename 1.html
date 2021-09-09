@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>1. Find items in the Meeting Room</title>
+ <script type="text/javascript">
+
+ let meetingRoomObject = [];
+  fetch("./data.json")
+.then(response => {
+   return response.json();
+})
+.then(function(data){
+   
+    var meetingRoomObject = data.filter(function(item){
+
+            return item.placement.name === 'Meeting Room';
+    });
+    console.log(meetingRoomObject);
+})
+
+</script>
+</head>
+<body>
+</body>
+</html>
